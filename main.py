@@ -193,7 +193,7 @@ class MyApp(object):
 
     def multi_scan(self):
 
-        self._executor = ThreadPoolExecutor(max_workers=10)
+        self._executor = ThreadPoolExecutor(max_workers=30)
         self._futures = []
         for x in self.ip_address_list:
             self._futures.append(self._executor.submit(check, x))
