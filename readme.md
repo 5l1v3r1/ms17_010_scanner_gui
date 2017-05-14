@@ -11,6 +11,6 @@ https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi
 
 https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi
 
-双击main.py 运行
+双击statr.cmd 运行
 
 
