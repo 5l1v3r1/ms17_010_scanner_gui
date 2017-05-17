@@ -4,13 +4,15 @@ https://github.com/liantian-cn/ms17_010_scanner_gui/archive/master.zip
 下载python 2.7.13:
 
 64bit
-
 https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi
 
 32bit
-
 https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi
 
 双击start.cmd 运行
 
+UI
+![](https://github.com/liantian-cn/ms17_010_scanner_gui/raw/master/snipaste_20170517_215141.png)
 
+Result
+![](https://github.com/liantian-cn/ms17_010_scanner_gui/raw/master/snipaste_20170517_215439.png)
