@@ -83,7 +83,7 @@ class MyApp(object):
         self.now = datetime.now().strftime("%y%m%d%H%M%S")
         self._bg = None
         # self._executor = ThreadPoolExecutor(max_workers=30)
-        self._executor = ProcessPoolExecutor(max_workers=60)
+        self._executor = ProcessPoolExecutor(max_workers=100)
         self._futures = []
         self.now = datetime.now().strftime("%y%m%d%H%M%S")
 
