@@ -68,12 +68,12 @@ def check(ip, port=445, timeout=3):
         if final_response[9] == "\x05" and final_response[10] == "\x02" and final_response[11] == "\x00" and \
                         final_response[12] == "\xc0":
             s.close()
-            logging.info("[+] [{0}] is likely VULNERABLE to MS17-010".format(ip))
+            logging.debug("[+] [{0}] is likely VULNERABLE to MS17-010".format(ip))
             return True
         else:
             s.close()
-            logging.info("[-] [{0}] stays in safety".format(ip))
+            logging.debug("[-] [{0}] stays in safety".format(ip))
             return False
     except:
-        logging.info("[*] [{0}] cannot connect".format(ip))
+        logging.debug("[*] [{0}] cannot connect".format(ip))
         return None

@@ -53,12 +53,12 @@ def check(ip, port=445, timeout=3):
         data = s.recv(1024)
         if "\x05\x02\x00\xc0" in data:
             s.close()
-            logging.info("[+] [{0}] is likely VULNERABLE to MS17-010".format(ip))
+            logging.debug("[+] [{0}] is likely VULNERABLE to MS17-010".format(ip))
             return True
         else:
             s.close()
-            logging.info("[-] [{0}] stays in safety".format(ip))
+            logging.debug("[-] [{0}] stays in safety".format(ip))
             return False
     except:
-        logging.info("[*] [{0}] cannot connect".format(ip))
+        logging.debug("[*] [{0}] cannot connect".format(ip))
         return None

@@ -38,9 +38,6 @@ from time import sleep
 
 def checker(ip, port=445, timeout=3):
     result_1 = check_1(ip=ip, port=port, timeout=timeout)
-    sleep(timeout)
-    result_2 = check_2(ip=ip, port=port, timeout=timeout)
-
     if result_1 is True:
         return ip, True, "[+] is likely VULNERABLE to MS17-010"
     elif result_1 is False:
