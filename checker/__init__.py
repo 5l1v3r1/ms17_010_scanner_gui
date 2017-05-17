@@ -41,10 +41,13 @@ def checker(ip, port=445, timeout=3):
     sleep(timeout)
     result_2 = check_2(ip=ip, port=port, timeout=timeout)
 
-    if result_1 or result_2:
+    if result_1 is True:
         return ip, True, "[+] is likely VULNERABLE to MS17-010"
-    elif (result_1 is False) or (result_2 is False):
+    elif result_1 is False:
+        sleep(timeout)
+        result_2 = check_2(ip=ip, port=port, timeout=timeout)
+        if result_2 is True:
+            return ip, True, "[+] is likely VULNERABLE to MS17-010"
         return ip, False, "[-] stays in safety"
     else:
         return ip, None, "[*] cannot connect"
-
